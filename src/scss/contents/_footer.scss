@@ -1,0 +1,50 @@
+@use '../base/var' as v; 
+@use '../base/mixins' as m;
+
+.footer{
+    margin-top: auto;
+    padding-top: 5rem;
+
+    &__details{
+        display: flex;
+        width: 100%;
+        padding-block: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: v.$black;
+        gap: 1rem;
+    }
+
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__tri{
+        color: grey;
+    }
+    &__xs{
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 1rem;
+
+        a{
+            color: v.$white;
+            font-size: 2rem;
+        }
+    }
+    img{
+        width: 4rem;
+        filter: invert(53%) sepia(78%) saturate(296%) hue-rotate(128deg) brightness(91%) contrast(84%);
+        transition: filter .4s;
+
+        &:hover{
+            filter: invert(87%) sepia(36%) saturate(638%) hue-rotate(102deg) brightness(107%) contrast(98%) drop-shadow(0 0 5px #66FCF1);
+        }
+    }
+    span{
+        font-weight: 600;
+    }
+}

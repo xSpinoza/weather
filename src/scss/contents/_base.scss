@@ -1,0 +1,13 @@
+@use '../base/var' as v; 
+@use '../base/mixins' as m;
+
+.base{
+    margin-top: 7rem;
+
+    @include m.desktop{ 
+        margin-top: 10rem
+    }
+    @include m.desktopPlus{ 
+        margin-top: 16rem
+    }
+}

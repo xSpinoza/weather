@@ -1,0 +1,48 @@
+@use '../base/var' as v; 
+@use '../base/mixins' as m;
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 7rem;
+
+    @include m.desktop{ 
+        margin-bottom: 8rem;
+    }
+    &__icon{
+        margin: 0 -3rem 2rem 0;
+        &--search{
+            margin: 0 0 2rem -3rem;
+            cursor: pointer;
+            transition: filter 0.3s ease-in-out;
+
+            &:hover{
+                filter: drop-shadow(0 0 5px #66FCF1);
+            }
+        }
+    }
+    &__input{
+        width: 100%;
+        max-width: 80rem;
+        background: none;
+        border: none;
+        border-bottom: 2px solid v.$second;
+        color: v.$white;
+        text-align: center;
+        font-size: 2rem;
+        transition: border-bottom .3s;
+
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid v.$main;
+        }
+        @include m.desktop{ 
+            font-size: 3rem;
+        }
+    }
+}
+
+.alertError{
+    border-bottom: 2px solid #ff3d00 !important;
+}
